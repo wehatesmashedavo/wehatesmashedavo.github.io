@@ -7,3 +7,14 @@ p {
 	     padding: 10px; 
 	     
 }
+
+
+#Navigationbar {
+    text-align: center;
+    background-color: green;
+}
+
+#Navigationitems li {
+	display: inline;
+}
+
