@@ -1,3 +1,8 @@
+*{
+	margin: 0;
+}
+
+
 p {
 	font-family: sans-serif;
 }
@@ -8,13 +13,36 @@ p {
 	     
 }
 
+/* Formatting for Navigation bar */
 
 #Navigationbar {
     text-align: center;
-    background-color: green;
+    background-color: black;
+    height: 40px;
 }
+
+
+	
+
 
 #Navigationitems li {
 	display: inline;
+
 }
 
+#Navigationitems a {
+	display: inline-block;
+	height: 40px;
+	color: white;
+	background-color: red;
+	line-height: 40px;
+	
+	
+
+
+
+
+	
+}
+
+/* End of Navigation bar formatting */
