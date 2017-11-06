@@ -1,8 +1,3 @@
-*{
-	margin: 0;
-}
-
-
 p {
 	font-family: sans-serif;
 }
@@ -13,20 +8,15 @@ p {
 	     
 }
 
-/* Formatting for Navigation bar */
 
 #Navigationbar {
     text-align: center;
-    background-color: black;
-    height: 40px;
+    background-color: green;
 }
-
-
-	
-
 
 #Navigationitems li {
 	display: inline;
+<<<<<<< HEAD
 
 }
 
@@ -135,3 +125,7 @@ p {
 
 
 /* End of Navigation bar formatting */
+=======
+}
+
+>>>>>>> parent of e770093... Formatting for Navigation bar
