@@ -11,24 +11,13 @@ p {
 
 #Navigationbar {
     text-align: center;
-    background-color: green;
+    background-color: black;
 }
 
-#Navigationitems li {
-	display: inline;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-}
-
-#Navigationitems a {
+#Navigationbar a {
 	display: inline-block;
-	height: 40px;
 	color: white;
-	background-color: red;
-	line-height: 40px;
-	
-		
 }
 
 * {box-sizing:border-box}
@@ -126,11 +115,3 @@ p {
 
 
 /* End of Navigation bar formatting */
-=======
-}
-
->>>>>>> parent of e770093... Formatting for Navigation bar
-=======
-}
-
->>>>>>> parent of e770093... Formatting for Navigation bar
