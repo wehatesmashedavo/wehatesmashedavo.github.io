@@ -15,14 +15,16 @@ $(document).ready(function(){
 
 $(document).ready(function(){
   var square=$(".box")
-  square.on('hover', function(){
-	square.css("border-color", "white");
+  $(".box").on('hover', function(){
+	$(".box").css("color", "red");
 
 	})
 })
 
 // End Navbar script
 
+
+//Slide show script
 
 $(document).ready(function() {
 	
@@ -35,3 +37,5 @@ $(document).ready(function() {
 
 	});
 });
+
+//End slideshow script
