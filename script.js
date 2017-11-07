@@ -29,6 +29,7 @@ $(document).ready(function() {
     $('.SlideContainer').cycle({
 		fx: 'fade',
 	pause: 1,
+	speed:2000,
 	prev: '#prev',
 	next: '#next'
 
