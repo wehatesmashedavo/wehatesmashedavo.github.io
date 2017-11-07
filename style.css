@@ -10,6 +10,19 @@ p {
 
 
 
+
+#social {
+  background-color: black;
+}
+
+
+.socialmedia img{
+  width: 30px;
+  height: 30px;
+  margin: 15px 40px;
+}
+
+
 /* Navigation bar styling */
 
 #Navigationbar {
@@ -27,7 +40,7 @@ p {
   transform: translateY(-50%);
   padding: 10px;
   font-family: 'Amatic SC', cursive;
-  
+  font-size: 25px;
 }
 
 /* End navigation bar styling */
