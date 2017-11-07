@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 $(document).ready(function(){
 	var button = $("click_me");
 	button.on('click', function () {
@@ -31,3 +32,11 @@ $(document).ready(function() {
 
 	});
 });
+=======
+	<script type="text/javascript">
+  	$(document).ready(function() {
+	var button = $("#click_me");
+	button.on('click', function() {
+	button.html("Clicked!");
+	}) </script>
+>>>>>>> c90614c1b37bcb323d8edaaed613765656926434
