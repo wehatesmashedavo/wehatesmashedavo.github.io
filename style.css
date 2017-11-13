@@ -119,6 +119,16 @@ p {
   opacity: 1;
 }
 
+/*Google Maps*/
+
+#map {
+   width: 100%;
+   height: 400px;
+   background-color: grey;
+ }
+
+/*End of Google Maps*/
+
 /*End of Central Styling*/
 
 
