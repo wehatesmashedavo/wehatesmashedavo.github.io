@@ -2,11 +2,60 @@
 <html>
   <head>
   	<link rel="stylesheet" href="style.css">
+    <!--jQuery-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>   
+    <!--Script for slideshow-->
+    <script src="./jquery.cycle.all.min.js"></script>
+
+    <!--External Script-->
+    <script src="./script.js" type="text/javascript"></script>
+    
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="
+    sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+      <!--Icon-->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Rozha+One" rel="stylesheet">
+
+
   </head>
 
-<!-- Nav bar needs to go here-->
+
 
   <body>
+    <!--Social Media bar-->
+    <div id="social" class="container-fluid">
+      <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">  
+          <a class="socialmedia"><img src="./icons/twitter.png"></a>
+          <a class="socialmedia"><img src="./icons/snapchat.png"></a>
+          <a class="socialmedia"><img src="./icons/facebook.png"></a>
+          <a class="socialmedia"><img src="./icons/instagram.png"></a>
+          <a class="socialmedia"><img src="./icons/gmail.png"></a>
+        </div>
+        <div class="col-sm-4"></div>
+        </div>
+    </div>
+
+
+    <!--End social media bar-->
+
+    <!--Start of Navigation bar-->
+    <div id="Navigationbar" class="container-fluid">
+      <div class="row">       
+          <div class="col-sm"><a href="./index.html" class="box">Home</a></div>
+          <div class="col-sm"><a href="./central.html" class="box">Central Manchester</a></div>
+          <div class="col-sm"><a href="./north.html" class="box">North Manchester</a></div>
+          <div class="col-sm"><a href="./south.html" class="box">South Manchester</a></div>
+          <div class="col-sm"><a href="./Bestbrunch.html" class="box">Manchester's Best Brunch</a></div>
+          
+        </div>
+    </div>
+
+    <!--End of Navigation bar HTML-->
 
    <div class='Central Heading'> 
   	<h1>Central Manchester</h1>
@@ -16,7 +65,7 @@
    </div>   
   	<br />
 
-  	<div class='Moose'>
+  	<div class="Moose">
       <p>Moose Coffee</p>
     	<br />
       <small>Moose serves up the best American-style brunch outside of NYC, plating up classic comfort foods - from pancakes to the 'New York Moose' (Eggs Benny to you and I), Moose is sure to become a firm fixture on your brunch list</small>		
@@ -33,7 +82,12 @@
       <p> Browns Coffee </p>
       <br />
       <small>Browns is blah blah blah</small>
+    </div>
 
+
+<script>$("button").on("click", function() {
+    alert("clicked!")
+  });</script>
 
   </body>
 

@@ -76,3 +76,16 @@ p {
 
 
 } 
+
+/*Central Styling*/
+
+
+.moose {
+  background-image: url("https://media.timeout.com/images/101711145/630/472/image.jpg");
+  height: auto;
+  background-size: cover;
+  margin: 0 auto;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+}
