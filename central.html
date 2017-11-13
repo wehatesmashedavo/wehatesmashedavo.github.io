@@ -66,8 +66,9 @@
   	<br />
 
   	<div class="moose">
-      <p>Moose Coffee</p>
-      <small>Moose serves up the best American-style brunch outside of NYC, plating up classic comfort foods - from pancakes to the 'New York Moose' (Eggs Benny to you and I), Moose is sure to become a firm fixture on your brunch list</small>		
+      <p>Moose Coffee <br />
+        <br/>
+      <small>Moose serves up the best American-style brunch outside of NYC, plating up classic comfort foods - from pancakes to the 'New York Moose' (Eggs Benny to you and I), Moose is sure to become a firm fixture on your brunch list</small></p>	
     </div> 
 
     <div class="Federal">
@@ -84,9 +85,13 @@
     </div>
 
 
-<script>$("button").on("click", function() {
-    alert("clicked!")
-  });</script>
+<script>
+  $('div.moose').on('click', function() {
+ $(this).toggleClass('show-description');
+ });
+</script>
+  
+</script>
 
   </body>
 
