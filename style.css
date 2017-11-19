@@ -78,7 +78,7 @@ p {
 
 } 
 
-/*Central Styling - PLEASE DON'T EDIT*/
+/*Central, North and South Styling*/
 
 .moose {
   background-image: url("https://images.theskinny.co.uk/assets/production/000/126/177/126177_widescreen.jpg")
@@ -154,36 +154,23 @@ background-image: url("https://www.kettlebellkitchen.com/wp-content/uploads/2017
   opacity: 1;
 }
 
-/*Google Maps*/
+.heading {
+  text-align: center;
+}
 
-#map {
-   width: 100%;
-   height: 400px;
-   background-color: grey;
- }
+#mapkit-9073 {
+        height:400px;
+        width:85%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 40px;
+    }
 
-/*End of Google Maps*/
+
 
 /*End of Central Styling*/
 
 
-/*North styling*/
-
-.Alabama {
-  background-image: url("http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2012/2/24/0/ZB0202H_classic-american-grilled-cheese_s4x3.jpg.rend.sniipadlarge.jpeg");
-  height: 500px;
-  background-size: cover;
-  margin: 0 auto;
-  position: center;
-  margin: 40 40 40 40;
-  border-radius: 12px;
-  max-width: 1200px;
-
-  color: black;
-  text-align: left;
-
-
-} 
 
 
 /* Header Styling*/

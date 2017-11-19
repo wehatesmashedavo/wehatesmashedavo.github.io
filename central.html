@@ -59,10 +59,11 @@
 
     <!--Body Content-->
 
-   <div class='Central Heading'> 
+   <div class="heading"> 
   	<h1>Central Manchester</h1>
-  	<p>Central Manchester is home to some of the best brunch outside of london
-  	Check out our top choices below</p>
+    <br />
+  	<p>Central Manchester is home to some of the best brunch outside of London.
+  	Check out our top choices below!</p>
    </div>   
 
   	<br />
@@ -110,27 +111,186 @@
 </script>
 <!--End of Scripts-->
 
-<!--Google Maps API-->
-<div id="map">
-  <script>
-      function initMap() {
-        var Moose = {lat: 53.481, lng: -2.241};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 20,
-          center: Moose
-        });
-        var marker = new google.maps.Marker({
-          position: Moose,
-          map: map
-        });
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdS5TmDzmw_cXLHnkKz4XT6nqFMSoEfZU&callback=initMap">
-    </script>
+<br />
+<h1><center>Locations</center></h1>
+<br />
 
-</div>
-   
+<!--Google Maps API-->
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA25f_4i-YoOH9tRd3r16Jlw4IZ3l7Dwoo&extension=.js"></script> 
+<script src="https://cdn.mapkit.io/v1/infobox.js"></script> 
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet"> 
+<link href="https://cdn.mapkit.io/v1/infobox.css" rel="stylesheet" > 
+ 
+<script> 
+    google.maps.event.addDomListener(window, 'load', init);
+    var map, markersArray = [];
+
+    function bindInfoWindow(marker, map, location) {
+        google.maps.event.addListener(marker, 'click', function() {
+            function close(location) {
+                location.ib.close();
+                location.infoWindowVisible = false;
+                location.ib = null;
+            }
+
+            if (location.infoWindowVisible === true) {
+                close(location);
+            } else {
+                markersArray.forEach(function(loc, index){
+                    if (loc.ib && loc.ib !== null) {
+                        close(loc);
+                    }
+                });
+
+                var boxText = document.createElement('div');
+                boxText.style.cssText = 'background: #fff;';
+                boxText.classList.add('md-whiteframe-2dp');
+
+                function buildPieces(location, el, part, icon) {
+                    if (location[part] === '') {
+                        return '';
+                    } else if (location.iw[part]) {
+                        switch(el){
+                            case 'photo':
+                                if (location.photo){
+                                    return '<div class="iw-photo" style="background-image: url(' + location.photo + ');"></div>';
+                                 } else {
+                                    return '';
+                                }
+                                break;
+                            case 'iw-toolbar':
+                                return '<div class="iw-toolbar"><h3 class="md-subhead">' + location.title + '</h3></div>';
+                                break;
+                            case 'div':
+                                switch(part){
+                                    case 'email':
+                                        return '<div class="iw-details"><i class="material-icons" style="color:#4285f4;"><img src="//cdn.mapkit.io/v1/icons/' + icon + '.svg"/></i><span><a href="mailto:' + location.email + '" target="_blank">' + location.email + '</a></span></div>';
+                                        break;
+                                    case 'web':
+                                        return '<div class="iw-details"><i class="material-icons" style="color:#4285f4;"><img src="//cdn.mapkit.io/v1/icons/' + icon + '.svg"/></i><span><a href="' + location.web + '" target="_blank">' + location.web_formatted + '</a></span></div>';
+                                        break;
+                                    case 'desc':
+                                        return '<label class="iw-desc" for="cb_details"><input type="checkbox" id="cb_details"/><h3 class="iw-x-details">Details</h3><i class="material-icons toggle-open-details"><img src="//cdn.mapkit.io/v1/icons/' + icon + '.svg"/></i><p class="iw-x-details">' + location.desc + '</p></label>';
+                                        break;
+                                    default:
+                                        return '<div class="iw-details"><i class="material-icons"><img src="//cdn.mapkit.io/v1/icons/' + icon + '.svg"/></i><span>' + location[part] + '</span></div>';
+                                    break;
+                                }
+                                break;
+                            case 'open_hours':
+                                var items = '';
+                                if (location.open_hours.length > 0){
+                                    for (var i = 0; i < location.open_hours.length; ++i) {
+                                        if (i !== 0){
+                                            items += '<li><strong>' + location.open_hours[i].day + '</strong><strong>' + location.open_hours[i].hours +'</strong></li>';
+                                        }
+                                        var first = '<li><label for="cb_hours"><input type="checkbox" id="cb_hours"/><strong>' + location.open_hours[0].day + '</strong><strong>' + location.open_hours[0].hours +'</strong><i class="material-icons toggle-open-hours"><img src="//cdn.mapkit.io/v1/icons/keyboard_arrow_down.svg"/></i><ul>' + items + '</ul></label></li>';
+                                    }
+                                    return '<div class="iw-list"><i class="material-icons first-material-icons" style="color:#4285f4;"><img src="//cdn.mapkit.io/v1/icons/' + icon + '.svg"/></i><ul>' + first + '</ul></div>';
+                                 } else {
+                                    return '';
+                                }
+                                break;
+                         }
+                    } else {
+                        return '';
+                    }
+                }
+
+                boxText.innerHTML = 
+                    buildPieces(location, 'photo', 'photo', '') +
+                    buildPieces(location, 'iw-toolbar', 'title', '') +
+                    buildPieces(location, 'div', 'address', 'location_on') +
+                    buildPieces(location, 'div', 'web', 'public') +
+                    buildPieces(location, 'div', 'email', 'email') +
+                    buildPieces(location, 'div', 'tel', 'phone') +
+                    buildPieces(location, 'div', 'int_tel', 'phone') +
+                    buildPieces(location, 'open_hours', 'open_hours', 'access_time') +
+                    buildPieces(location, 'div', 'desc', 'keyboard_arrow_down');
+
+                var myOptions = {
+                    alignBottom: true,
+                    content: boxText,
+                    disableAutoPan: true,
+                    maxWidth: 0,
+                    pixelOffset: new google.maps.Size(-140, -40),
+                    zIndex: null,
+                    boxStyle: {
+                        opacity: 1,
+                        width: '280px'
+                    },
+                    closeBoxMargin: '0px 0px 0px 0px',
+                    infoBoxClearance: new google.maps.Size(1, 1),
+                    isHidden: false,
+                    pane: 'floatPane',
+                    enableEventPropagation: false
+                };
+
+                location.ib = new InfoBox(myOptions);
+                location.ib.open(map, marker);
+                location.infoWindowVisible = true;
+            }
+        });
+    }
+
+    function init() {
+        var mapOptions = {
+            center: new google.maps.LatLng(53.482376855303585,-2.2407971360473766),
+            zoom: 15,
+            gestureHandling: 'auto',
+            fullscreenControl: false,
+            zoomControl: true,
+            disableDoubleClickZoom: true,
+            mapTypeControl: true,
+            mapTypeControlOptions: {
+                style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+            },
+            scaleControl: true,
+            scrollwheel: true,
+            streetViewControl: true,
+            draggable : true,
+            clickableIcons: false,
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+        }
+        var mapElement = document.getElementById('mapkit-9073');
+        var map = new google.maps.Map(mapElement, mapOptions);
+        var locations = [
+            {"title":"Moose Coffee","address":"20 York St, Manchester M2 2BB, UK","desc":"","tel":"0161 228 7994","int_tel":"+44 161 228 7994","email":"","web":"","web_formatted":"","open":"Closed","time":"1820","lat":53.4805818,"lng":-2.2408109000000422,"vicinity":"20 York Street, Manchester","open_hours":[{"day":"Monday","hours":"8am–5pm"},{"day":"Tuesday","hours":"8am–5pm"},{"day":"Wednesday","hours":"8am–5pm"},{"day":"Thursday","hours":"8am–5pm"},{"day":"Friday","hours":"8am–5pm"},{"day":"Saturday","hours":"8am–6pm"},{"day":"Sunday","hours":"8am–4pm"}],"marker":{"url":"https://maps.gstatic.com/mapfiles/api-3/images/spotlight-poi_hdpi.png","scaledSize":{"width":25,"height":42,"f":"px","b":"px"},"origin":{"x":0,"y":0},"anchor":{"x":12,"y":42}},"iw":{"address":true,"desc":true,"email":true,"enable":true,"int_tel":true,"open":true,"open_hours":true,"photo":true,"tel":true,"title":true,"web":true}},{"title":"Federal Cafe Bar","address":"9 Nicholas Croft, Manchester M4 1EY, UK","desc":"","tel":"0161 425 0974","int_tel":"+44 161 425 0974","email":"","web":"","web_formatted":"","open":"Closed","time":"1820","lat":53.4842582,"lng":-2.2384803999999576,"vicinity":"9 Nicholas Croft, Manchester","open_hours":[{"day":"Monday","hours":"7:30am–6pm"},{"day":"Tuesday","hours":"7:30am–6pm"},{"day":"Wednesday","hours":"7:30am–6pm"},{"day":"Thursday","hours":"7:30am–6pm"},{"day":"Friday","hours":"7:30am–6pm"},{"day":"Saturday","hours":"8am–6pm"},{"day":"Sunday","hours":"8am–5pm"}],"marker":{"url":"https://maps.gstatic.com/mapfiles/api-3/images/spotlight-poi_hdpi.png","scaledSize":{"width":25,"height":42,"f":"px","b":"px"},"origin":{"x":0,"y":0},"anchor":{"x":12,"y":42}},"iw":{"address":true,"desc":true,"email":true,"enable":true,"int_tel":true,"open":true,"open_hours":true,"photo":true,"tel":true,"title":true,"web":true}},{"title":"Browns Manchester","address":"1 York St, Manchester M2 2AW, UK","desc":"","tel":"0161 819 1055","int_tel":"+44 161 819 1055","email":"","web":"","web_formatted":"","open":"Open","time":"1820","lat":53.48111,"lng":-2.241549999999961,"vicinity":"1 York Street, Manchester","open_hours":[{"day":"Monday","hours":"9am–11pm"},{"day":"Tuesday","hours":"9am–11pm"},{"day":"Wednesday","hours":"9am–11pm"},{"day":"Thursday","hours":"9am–11pm"},{"day":"Friday","hours":"9am–12am"},{"day":"Saturday","hours":"9am–12am"},{"day":"Sunday","hours":"9am–10:30pm"}],"marker":{"url":"https://maps.gstatic.com/mapfiles/api-3/images/spotlight-poi_hdpi.png","scaledSize":{"width":25,"height":42,"f":"px","b":"px"},"origin":{"x":0,"y":0},"anchor":{"x":12,"y":42}},"iw":{"address":true,"desc":true,"email":true,"enable":true,"int_tel":true,"open":true,"open_hours":true,"photo":true,"tel":true,"title":true,"web":true}}
+        ];
+        for (i = 0; i < locations.length; i++) {
+            marker = new google.maps.Marker({
+                icon: locations[i].marker,
+                position: new google.maps.LatLng(locations[i].lat, locations[i].lng),
+                map: map,
+                title: locations[i].title,
+                address: locations[i].address,
+                desc: locations[i].desc,
+                tel: locations[i].tel,
+                int_tel: locations[i].int_tel,
+                vicinity: locations[i].vicinity,
+                open: locations[i].open,
+                open_hours: locations[i].open_hours,
+                photo: locations[i].photo,
+                time: locations[i].time,
+                email: locations[i].email,
+                web: locations[i].web,
+                iw: locations[i].iw
+            });
+            markersArray.push(marker);
+
+            if (locations[i].iw.enable === true){
+                bindInfoWindow(marker, map, locations[i]);
+            }
+        }
+    }
+</script>
+
+<div id='mapkit-9073'></div>
+
+
+
 <!--End of Google Maps-->  
 
   </body>
