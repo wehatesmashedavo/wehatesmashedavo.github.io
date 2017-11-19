@@ -46,7 +46,7 @@ p {
   top: 50%;
   transform: translateY(-50%);
   padding: 10px;
-  font-family: 'Amatic SC', cursive;
+  font-family: 'Amatic SC', serif;
   font-size: 25px;
 }
 
@@ -64,14 +64,15 @@ p {
 } 
  
 .SlideContainer img {  
-    padding: 10px;  
-    border:  1px solid black;  
+    padding: 0px;  
+    border:  0px;  
     background-color: #eee; 
     top:  0; 
     left: 0;
     max-width: 100%;
     min-width: 100%;
     display: cover;
+    z-index: 2;
 
 
 
@@ -156,7 +157,11 @@ p {
 #header {
   color: white;
   background-color: firebrick; 
-  font-family: ;
+  font-family: 'Josefin Sans', serif;
+  text-align: center;
+  font-size: 15px;
+
+
 }
 
 /* End Header Styling */
