@@ -80,7 +80,7 @@ p {
 /*Central Styling - PLEASE DON'T EDIT*/
 
 
-.moose {
+.moose .federal .browns {
   background-image: url("https://images.theskinny.co.uk/assets/production/000/126/177/126177_widescreen.jpg");
   height: 400px;
   background-size: cover;
@@ -91,7 +91,7 @@ p {
   max-width: 1200px;
 }
 
-.moose p {
+.moose .federal .bronws p {
   color: white;
   background: black;
   padding: 10px;
@@ -107,7 +107,7 @@ p {
   font-size: 40px;
 }
 
-.moose small {
+.moose .federal .browns small {
   opacity: 0;
 }
 

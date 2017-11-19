@@ -73,24 +73,37 @@
       <small>Moose serves up the best American-style brunch outside of NYC, plating up classic comfort foods - from pancakes to the 'New York Moose' (Eggs Benny to you and I), Moose is sure to become a firm fixture on your brunch list</small></p>	
     </div> 
 
+    <br />
+
     <div class="Federal">
-      <p>Federal Coffee</p>
+      <p>Federal Coffee
       <br />
-      <small>Federal is blah blah blah 
-      </small>  
+      <small>Federal Coffee opts for the laid-back approach of Australian and New Zealand eataries, with a compact but delicious menu of hipster breakfast classics. With plenty of veggie options too, this is great place to while away an hour or two this weekend.</small></p>  
     </div>  
 
+    <br />
+
     <div class="browns">
-      <p> Browns Coffee </p>
+      <p> Browns Brasserie
       <br />
-      <small>Browns is blah blah blah</small>
+      <small>Browns is a stylish and elegant brunch option, with the interior decor being almost as impressive as the food. Try the lobster benedict is you're feeling fancy, or the steak and eggs to kick even the meanest of hangovers.</small> </p>
     </div>
+
+    <br />
 
     <!--End of Body Content-->
 
 <!--Scripts-->
 <script>
   $('div.moose').on('click', function() {
+ $(this).toggleClass('show-description');
+ });
+
+  $('div.Federal').on('click', function() {
+ $(this).toggleClass('show-description');
+ });
+
+  $('div.browns').on('click', function() {
  $(this).toggleClass('show-description');
  });
 </script>
