@@ -54,6 +54,60 @@
     </div>
 
     <!--End of Navigation bar HTML-->
+
+    <!--Body Content-->
+
+   <div class='Central Heading'> 
+    <h1>Central Manchester</h1>
+    <p>Central Manchester is home to some of the best brunch outside of london
+    Check out our top choices below</p>
+   </div>   
+
+    <br />
+
+    <div class="laundrette">
+      <p>Laundrette
+        <br />
+      <small>Laundrette is the ultimate fashionable spot in Manchester, known for its bathtubs of gin and retro styling. Brunch is served every day of the week, so it's great if you've been playing out on a school night!</small></p>  
+    </div> 
+
+    <br />
+
+    <div class="alberts">
+      <p>Albert's Shed
+      <br />
+      <small>This Castlefield restaurant is about as no-fuss as they come, serving up breakfast butties, waffles and fry ups. Make the most of the terrace for an al fresco breakfast in the warmer months.</small></p>  
+    </div>  
+
+    <br />
+
+    <div class="refuge">
+      <p> Refuge
+      <br />
+      <small>Refuge is tucked within the Prinipal hotel at the South of the City. Serving a small range of classics, like bacon butties and crumpets. Come for the coffee, stay for the great music and atmosphere.</small> </p>
+    </div>
+
+    <br />
+
+    <!--End of Body Content-->
+
+<!--Scripts-->
+<script>
+  $('div.laundrette').on('click', function() {
+ $(this).toggleClass('show-description');
+ });
+
+  $('div.alberts').on('click', function() {
+ $(this).toggleClass('show-description');
+ });
+
+  $('div.refuge').on('click', function() {
+ $(this).toggleClass('show-description');
+ });
+
+</script>
+<!--End of Scripts-->
+
   </body>
 
 </html>
