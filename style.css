@@ -94,7 +94,31 @@ p {
   background-image: url("https://leeds-list.com/wp-content/uploads/2015/08/ll-browns-breakfast-review-july-2015-at-22.jpg")
 }
 
-.moose, .federal, .browns {
+.redbank {
+  background-image: url("https://media-cdn.tripadvisor.com/media/photo-s/0e/93/8f/7e/baked-eggs-for-brunch.jpg")
+}
+
+.milk {
+  background-image: url("http://www.wow247.co.uk/wp-content/uploads/2016/03/black-milk-cereal.jpg")
+}
+
+.kettlebell {
+background-image: url("https://www.kettlebellkitchen.com/wp-content/uploads/2017/09/Fat-Loss-sports-Header_IMG_0011-Edit.jpg")
+}
+
+.laundrette {
+  background-image: url("https://img.static-bookatable.com/the-laundrette-newcastle-9.jpg?id=43e82564-0cea-488b-a2cb-60304ff55f1d.jpg&404=bat2/404-restaurant.jpg&width=600&height=400&scale=both&mode=crop")
+}
+
+.alberts {
+  background-image: url("https://media-cdn.tripadvisor.com/media/photo-s/0c/25/df/34/albert-s-breakfast.jpg")
+}
+
+.refuge {
+  background-image: url("http://www.luxurylifestylemag.co.uk/wp-content/uploads/2017/05/Refuge-chocolate-fondue.jpg")
+}
+
+.moose, .federal, .browns, .redbank, .milk, .kettlebell, .laundrette, .alberts, .refuge {
   height: 400px;
   background-size: cover;
   margin: 0 auto;
@@ -104,7 +128,7 @@ p {
   max-width: 1200px;
 }
 
-.browns p, .moose p, .federal p {
+.browns p, .moose p, .federal p, .redbank p, .milk p, .kettlebell p, .laundrette p, .alberts p, .refuge p {
   color: white;
   background: black;
   padding: 10px;
@@ -120,7 +144,7 @@ p {
   font-size: 40px;
 }
 
-.moose small , .federal small , .browns small {
+.moose small , .federal small , .browns small, .redbank small, .milk small, .kettlebell small, .laundrette small, .alberts small, .refuge small {
   opacity: 0;
 }
 

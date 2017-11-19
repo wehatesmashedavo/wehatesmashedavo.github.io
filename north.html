@@ -53,36 +53,57 @@
 
     <!--End of Navigation bar HTML-->
 
- <div class='North Heading'> 
+<!--Body Content-->
+
+   <div class='Central Heading'> 
     <h1>North Manchester</h1>
-    <p>The Northern Quarter is the heart to Manchesters trendy and buzzy vibes
-    Check out our top choices below</p>
+    <p>North Manchester has seen a surge in popularity recently, with lots of brunch places opening</p>
    </div>   
 
     <br />
 
-    <div class="Alabama">
-      <p> <b> Alabama's All American Eatery</b></p>
-      <small>Alabama is home to comfortable eating with good vibes and freshly grilled food. Their menu is bound to have anything that tickles your fancy from thick fresh milkhakes to classic American grilled cheese sandwich. A buzzing environment with good old diner-style brunch- an experience not be missed!</small>   
+    <div class="redbank">
+      <p>Redbank
+        <br />
+      <small>Redbank is tucked away in the Green Quarter, and definitely worth the short trip out of town to try. They also host pop ups and food events so keep your eyes peeled for some unmissable food.</small></p>  
     </div> 
 
-    <div class="Federal">
-      <p>Federal Coffee</p>
+    <br />
+
+    <div class="milk">
+      <p>Black Milk
       <br />
-      <small>Federal is blah blah blah 
-      </small>  
+      <small>Black Milk is home of the ultimate filthy breakfasts. Think bowls of cereal covered with chocolates, or milkshakes with a whole slice of cheesecake on top. Phwoar!</small></p>  
     </div>  
 
-    <div class="browns">
-      <p> Browns Coffee </p>
+    <br />
+
+    <div class="kettlebell">
+      <p> Kettlebell Kitchen
       <br />
-      <small>Browns is blah blah blah</small>
+      <small>Kettlebell Kitchen is a fitness lovers dream, with the whole menu designed to be high in protein to help you meet your fitness goals. From lean fry up's to protein waffles, you're in for a treat here.</small> </p>
     </div>
 
+    <br />
 
-<script>$("button").on("click", function() {
-    alert("clicked!")
-  });</script>
+    <!--End of Body Content-->
+
+<!--Scripts-->
+<script>
+  $('div.redbank').on('click', function() {
+ $(this).toggleClass('show-description');
+ });
+
+  $('div.milk').on('click', function() {
+ $(this).toggleClass('show-description');
+ });
+
+  $('div.kettlebell').on('click', function() {
+ $(this).toggleClass('show-description');
+ });
+
+</script>
+<!--End of Scripts-->
 
   	
 
