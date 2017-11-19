@@ -58,9 +58,7 @@ p {
     margin:  0; 
     max-width: 100%;
     min-width: 100%;
-    border: 20px black, solid;
-    bor
-
+   
 
 
 } 
@@ -94,31 +92,7 @@ p {
   background-image: url("https://leeds-list.com/wp-content/uploads/2015/08/ll-browns-breakfast-review-july-2015-at-22.jpg")
 }
 
-.redbank {
-  background-image: url("https://media-cdn.tripadvisor.com/media/photo-s/0e/93/8f/7e/baked-eggs-for-brunch.jpg")
-}
-
-.milk {
-  background-image: url("http://www.wow247.co.uk/wp-content/uploads/2016/03/black-milk-cereal.jpg")
-}
-
-.kettlebell {
-background-image: url("https://www.kettlebellkitchen.com/wp-content/uploads/2017/09/Fat-Loss-sports-Header_IMG_0011-Edit.jpg")
-}
-
-.laundrette {
-  background-image: url("https://img.static-bookatable.com/the-laundrette-newcastle-9.jpg?id=43e82564-0cea-488b-a2cb-60304ff55f1d.jpg&404=bat2/404-restaurant.jpg&width=600&height=400&scale=both&mode=crop")
-}
-
-.alberts {
-  background-image: url("https://media-cdn.tripadvisor.com/media/photo-s/0c/25/df/34/albert-s-breakfast.jpg")
-}
-
-.refuge {
-  background-image: url("http://www.luxurylifestylemag.co.uk/wp-content/uploads/2017/05/Refuge-chocolate-fondue.jpg")
-}
-
-.moose, .federal, .browns, .redbank, .milk, .kettlebell, .laundrette, .alberts, .refuge {
+.moose, .federal, .browns {
   height: 400px;
   background-size: cover;
   margin: 0 auto;
@@ -128,7 +102,7 @@ background-image: url("https://www.kettlebellkitchen.com/wp-content/uploads/2017
   max-width: 1200px;
 }
 
-.browns p, .moose p, .federal p, .redbank p, .milk p, .kettlebell p, .laundrette p, .alberts p, .refuge p {
+.browns p, .moose p, .federal p {
   color: white;
   background: black;
   padding: 10px;
@@ -144,7 +118,7 @@ background-image: url("https://www.kettlebellkitchen.com/wp-content/uploads/2017
   font-size: 40px;
 }
 
-.moose small , .federal small , .browns small, .redbank small, .milk small, .kettlebell small, .laundrette small, .alberts small, .refuge small {
+.moose small , .federal small , .browns small {
   opacity: 0;
 }
 
@@ -195,10 +169,27 @@ background-image: url("https://www.kettlebellkitchen.com/wp-content/uploads/2017
   background-color: firebrick; 
   font-family: 'Josefin Sans', serif;
   text-align: center;
-  font-size: 15px;
+  font-size: 12px;
   padding: 10px;
 
 
 }
 
+
+.bees {
+  background-color: firebrick;
+}
+
+.bees img{
+  background-color: firebrick;
+  height: 40px;
+
+}
+.bee img{
+  background-color: black;
+  height: 40px;
+
+}
+
 /* End Header Styling */
+
