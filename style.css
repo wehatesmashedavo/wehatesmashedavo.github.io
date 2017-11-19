@@ -79,9 +79,19 @@ p {
 
 /*Central Styling - PLEASE DON'T EDIT*/
 
+.moose {
+  background-image: url("https://images.theskinny.co.uk/assets/production/000/126/177/126177_widescreen.jpg")
+}
 
-.moose .federal .browns {
-  background-image: url("https://images.theskinny.co.uk/assets/production/000/126/177/126177_widescreen.jpg");
+.federal {
+  background-image: url("https://asideofsweet.com/wp-content/uploads/2017/07/Federal-Cafe-Manchester-Brunch-Coffee-Restaurant-1076.jpg")
+}
+
+.browns {
+  background-image: url("https://leeds-list.com/wp-content/uploads/2015/08/ll-browns-breakfast-review-july-2015-at-22.jpg")
+}
+
+.moose, .federal, .browns {
   height: 400px;
   background-size: cover;
   margin: 0 auto;
@@ -91,7 +101,7 @@ p {
   max-width: 1200px;
 }
 
-.moose .federal .bronws p {
+.browns p, .moose p, .federal p {
   color: white;
   background: black;
   padding: 10px;
@@ -107,7 +117,7 @@ p {
   font-size: 40px;
 }
 
-.moose .federal .browns small {
+.moose small , .federal small , .browns small {
   opacity: 0;
 }
 
