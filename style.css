@@ -65,7 +65,7 @@ p {
  
 .SlideContainer img {  
     padding: 0px;  
-    border:  0px;  
+   
     background-color: #eee; 
     top:  0; 
     left: 0;
@@ -178,11 +178,13 @@ p {
 
 .bees {
   background-color: firebrick;
+  text-align: center;
 }
 
 .bees img{
   background-color: firebrick;
   height: 40px;
+
 
 }
 .bee img{
