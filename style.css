@@ -58,6 +58,8 @@ p {
     margin:  0; 
     max-width: 100%;
     min-width: 100%;
+    border: 20px black, solid;
+    bor
 
 
 
@@ -170,6 +172,7 @@ p {
   font-family: 'Josefin Sans', serif;
   text-align: center;
   font-size: 15px;
+  padding: 10px;
 
 
 }
