@@ -207,7 +207,13 @@ background-image: url("https://www.kettlebellkitchen.com/wp-content/uploads/2017
 /* End Header Styling */
 
 
-
+/* Best Brunch Styling*/
 .video {
 text-align: center;
 }
+
+.bestbrunch, .button, .brunchhead {
+  text-align: center;
+}
+
+/* End of best brunch styling*/
