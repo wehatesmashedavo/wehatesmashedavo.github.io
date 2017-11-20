@@ -208,12 +208,19 @@ background-image: url("https://www.kettlebellkitchen.com/wp-content/uploads/2017
 
 
 /* Best Brunch Styling*/
-.video {
-text-align: center;
+
+
+.bestbrunch, .button, .brunchhead, .contactform, .video {
+  text-align: center;
 }
 
-.bestbrunch, .button, .brunchhead {
-  text-align: center;
+.iframe {
+  margin-left: 125px;
+}
+
+.contactform {
+  background-color: #d3d3d3;
+  opacity: 25%;
 }
 
 /* End of best brunch styling*/
